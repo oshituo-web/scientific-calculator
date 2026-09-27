@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e9edf2;
+    font-family: Arial, sans-serif;
+}
+.calculator {
+    width: min(100%, 400px);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: #20252b;
+    box-sizing: border-box;
+}
+.brand {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #eee;
+    margin-bottom: 5px;
+}
+.display {
+    min-height: 100px;
+    padding: 5px 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background: #11151a;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+
+    overflow: hidden;
+}
+.previous-operation {
+    width: 100%;
+    min-height: 20px;
+    font-size: 1rem;
+    color:  #d3d3d3;
+    overflow-wrap: anywhere;
+}
+.current-operation {
+    width: 100%;
+    font-size: 2.1rem;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+    color: #fff;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+button {
+    height: 60px;
+    width: 80px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+button:hover {
+    filter: brightness(1.15);
+}
+button:active {
+    transform: scale(0.97);
+}
+.scientific-buttons {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 5px;
+    margin-bottom: 12px;
+}
+.scientific-buttons button {
+    height: 45px;
+    width: 55px;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+.function {
+    background: #eeeeee;
+    color: #333;
+}
+.clear {
+    background: #eeeeee;
+    color: #d33;
+}
+.delete {
+    background: #eeeeee;
+    color: #d33;
+}
+.number {
+    background: #eeeeee;
+    color: #11151a;
+}
+.operator {background: #eeeeee;
+    color: #248a16;;
+
+}
+.equals {
+    background: #248a16;;
+    color: #eeeeee;
+}
+
+/*--- MEDIA QUERY ---*/
+@media (max-width:480px) {
+.calculator {
+    padding: 12px;
+    border-radius: 15px;
+}
+.display {
+    min-height: 100px;
+    padding: 15px;
+}
+.current-operation {
+    font-size: 32px;
+}
+button {
+    min-height: 42px;
+    font-size: 1.2rem;
+}
+.buttons {
+    gap: 5px;
+}
+}
